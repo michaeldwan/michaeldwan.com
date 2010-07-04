@@ -100,7 +100,7 @@ This one that notifies [Hoptoad](http://hoptoadapp.com) after you've successfull
   end
 {% endhighlight %}
 
-Pushing branches willy-nilly to production could be trouble. This task, which is included in the [full gist](https://gist.github.com/8bdcba5fd08c10afbe54), will prompt you when deploying a non-master branch to production:
+Pushing branches willy-nilly to production could be trouble. This task, which is included in the [full gist](http://gist.github.com/463024), will prompt you when deploying a non-master branch to production:
 
 {% highlight ruby %}
   namespace :deploy do
@@ -120,4 +120,4 @@ Pushing branches willy-nilly to production could be trouble. This task, which is
 
 ## Conclusion
 
-This simple task maintains Heroku's simplicity while adding some of capistrano's extensibility and has served me well on projects both large and small. I'm excited to see what you can do with it -- so grab the [full gist](https://gist.github.com/8bdcba5fd08c10afbe54) and fork away!
+This simple task maintains Heroku's simplicity while adding some of capistrano's extensibility and has served me well on projects both large and small. I'm excited to see what you can do with it -- so grab the [full gist](http://gist.github.com/463024) and fork away!
