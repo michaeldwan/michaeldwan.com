@@ -1,9 +1,9 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem 'jekyll'
+gem 'jekyll', '~> 2.0.0'
 gem 'rake'
-gem 'sass', '3.2.13'
+gem 'sass'
 gem 'compass'
 gem 'jekyll-assets'
 gem 'kramdown'
