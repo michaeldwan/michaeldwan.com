@@ -1,0 +1,31 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>MichaelDwan.com</title>
+  <link href="http://michaeldwan.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://michaeldwan.com/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://michaeldwan.com/</id>
+  <author>
+    <name>Michael Dwan</name>
+    <email>mpdwan@gmail.com</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://michaeldwan.com{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://michaeldwan.com{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Michael Dwan</name>
+      <uri>http://michaeldwan.com/</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>

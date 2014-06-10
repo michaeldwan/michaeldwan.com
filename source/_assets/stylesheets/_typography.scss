@@ -1,0 +1,251 @@
+.typography {
+  .drop-cap {
+    font-family:'Times New Roman', Times, serif;
+  }
+
+  h1 {
+    font-size: 3em;
+    line-height: 1.333em;
+    margin: .97em 0 0em;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.1em;
+    margin: 1em 0 .5em;
+  }
+
+  h3 {
+    font-size: 1.325em;
+    margin: 1em 0 .5em;
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1em 0 .5em;
+  }
+
+  small {
+    display:block;
+    font-size:.75em;
+    letter-spacing:.1em;
+    margin:2.2em 0 -.2em;
+    font-style:italic;
+    font-weight:bold;
+    line-height:2em;
+  }
+
+  p, form, blockquote {
+    margin: 1.5em 0;
+  }
+
+  ul {
+    list-style-position: outside;
+    list-style-type: disc;
+    line-height: 1.5;
+    margin: 1.5em 0 1em 1.5em;
+  }
+
+  li {
+    margin-bottom: .75em;
+  }
+
+  ol {
+    list-style-position: outside;
+    list-style-type: decimal;
+    margin: 1.5em 0 1em 1.5em;
+  }
+
+  blockquote {
+    font-style: italic;
+    margin-left: 2.2em;
+
+    p {
+      font-size: 1.75em;
+      font-weight: 300;
+      line-height: 1.5em;
+      margin: 0;
+    }
+
+    &:before {
+      content: "“";
+      font-size: 4em;
+      text-indent:-.6em;
+      margin-top:.5em;
+      float:left;
+      opacity:.2;
+    }
+  }
+
+  cite {
+    display:block;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-style:normal;
+    font-size:smaller;
+    margin-top:.5em;
+    margin-left:1.5em;
+
+    &:before {
+      content:"—";
+      font-size:1.5em;
+      text-indent:-1.3em;
+      font-weight:bold;
+      margin-top:-.1em;
+      opacity:.5;
+    }
+  }
+
+  dl {
+    margin:1.45em 0;
+    /*border-top:1px dotted #999;
+    border-bottom:1px dotted #999;
+    */
+  }
+
+  dt {
+    word-spacing:.2em;
+    border-bottom:1px dotted #999;
+    margin-top:1.5em;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:.9em;
+    letter-spacing:.2em;
+    padding-bottom:.5em;
+
+    &:before {
+      content:"\2767";
+      font-size:1.25em;
+      text-indent:-1.5em;
+      float:left;
+    }
+  }
+
+  dd {
+    font-style:italic;
+    font-size:.9em;
+    margin-bottom:1.65em;
+    line-height:1.75em;
+    margin-top:.75em;
+  }
+
+  abbr {
+    text-transform:uppercase;
+    font-size:.9em;
+    letter-spacing:.1em;
+  }
+
+  p {
+    hyphenate: auto;
+    hyphenate-before:2;
+    hyphenate-after:3;
+    hyphenate-lines: 3;
+    orphans:4;
+    text-align-last: justify;
+
+    span.pullquote {
+      text-indent:0;
+    }
+  }
+
+  // p + p, p + aside + p, p + .sidenote + p, p.kicker + p.kicker {
+  //   text-indent:1.8em;
+  //   margin-top:0;
+  // }
+
+  /*Compositional Elements*/
+
+  strong {
+    font-weight: bold;
+  }
+
+  .run-in,
+  cite {
+    text-transform:uppercase;
+    font-style:normal;
+    letter-spacing:.2em;
+    font-size:.9em;
+  }
+
+  .superscript {
+    font-family:arial, sans-serif;
+    vertical-align:super;
+    font-size:75%;
+    margin-right:.4em;
+    text-transform:lowercase;
+    font-variant:small-caps;
+    letter-spacing:.1em;
+    line-height:0;
+  }
+
+  .subscript {
+    font-family:arial, sans-serif;
+    vertical-align:sub;
+    font-size:75%;
+    margin-right:.4em;
+    text-transform:lowercase;
+    font-variant:small-caps;
+    letter-spacing:.1em;
+    line-height:0em;
+  }
+
+  a.superscript,
+  a.subscript {
+    text-decoration:none;
+  }
+
+  .pullquote {
+    font-style:italic;
+    letter-spacing:.05em;
+    margin:0em .7em 0 0;
+    padding-top:.35em;
+    line-height:1.5em;
+    display:block;
+    float:left;
+    font-size:1.75em;
+    width:50%;
+
+    &:before {
+      font-family:Georgia, serif;
+      content: "“";
+      font-size:2em;
+      text-indent:-.6em;
+      margin-top:.05em;
+      float:left;
+      opacity:.3;
+    }
+  }
+
+  .footnote {
+    border-top:1px solid black;
+    font-size:.75em;
+    margin-top:3.5em;
+
+    li {
+      margin:1.5em 0 1.5em;
+      word-spacing:.1em;
+      line-height:1.75em;
+    }
+  }
+
+  .caption {
+    font-size:.8em;
+    font-style:italic;
+    margin:.6em 0 -.2em;
+  }
+
+  .drop-cap {
+    display:block;
+    font-style:normal;
+    font-size:8em;
+    float:left;
+    margin:.04em .1em 0 0;
+    line-height:.67em;
+  }
+
+  /*Tweaks*/
+  .kern {
+    letter-spacing:-.1em;
+  }
+}

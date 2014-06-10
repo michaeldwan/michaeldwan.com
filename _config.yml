@@ -1,2 +1,12 @@
 pygments: true
-permalink: /writings/:title.html
+permalink: /essays/:title.html
+source: source
+destination: build
+timezone: America/Denver
+safe: false
+markdown: kramdown
+assets:
+  js_compressor:  uglifier
+  css_compressor: sass
+
+google_analytics_account_id: UA-9028210-1'

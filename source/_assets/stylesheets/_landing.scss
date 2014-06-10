@@ -1,0 +1,61 @@
+body#landing {
+  .container {
+    margin-top: 3em;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+
+  h2 {
+    font-size: 3em;
+    line-height: 1em;
+    margin: 1em 0 0.3em;
+    text-align: center;
+  }
+
+  section {
+    margin: 2em;
+  }
+
+  section#about {
+    img {
+      height: 128px;
+      width: 128px;
+      border-radius:50%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+  }
+
+  section#links {
+    text-align: center;
+  }
+
+  section#essays {
+    ul {
+
+      li {
+        margin: 0.5em 0;
+
+        span {
+          display: inline-block;
+          width: 25%;
+          text-align: right;
+          font-weight: 100;
+          opacity: 0.5;
+          font-size: 0.9em;
+        }
+
+        a {
+          margin-left: 0.5em;
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
+}

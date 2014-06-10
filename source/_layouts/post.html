@@ -1,0 +1,19 @@
+---
+layout: chrome
+body_id: essay
+---
+
+<header>
+  <h2><a href="/">Michael Dwan</a></h2>
+  <h1>{{ page.title }}</h1>
+  {% if page.date %}
+  <h3 class="date">{{ page.date | date: "%A, %B %d, %Y" }}</h3>
+  {% endif %}
+</header>
+<article>
+  <section class="body">
+    {{ content }}
+  </section>
+</article>
+
+{% include footer.html %}

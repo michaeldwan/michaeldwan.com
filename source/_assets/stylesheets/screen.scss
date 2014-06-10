@@ -1,0 +1,71 @@
+@import "compass/reset";
+@import "compass/css3";
+@import 'simplegrid';
+@import 'typography';
+@import 'syntax';
+
+$background-color: #F3F2EE;
+$text-color: #333;
+$tint-color: #d25349;
+$dark-tint-color: darken($tint-color, 30%);
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-size:100%;
+  font-size:18px;
+  line-height:1.6em;
+  font-family: "freight-text-pro", Georgia, Times, serif;
+
+  .container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 1em;
+  }
+}
+
+header,
+footer {
+  margin: 20px auto;
+  text-align: center;
+
+  h1 {
+    font-size: 2.64em;
+    line-height: 1em;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin: 0.3em 0;
+  }
+
+  h3 {
+    font-size: 1em;
+    font-weight: lighter;
+    margin: 0.3em 0;
+  }
+}
+
+footer {
+  padding: 1em;
+  border-top: 2px solid #ccc;
+}
+
+a {
+  @include transition-duration(0.1s);
+  @include transition-timing-function(ease);
+
+  color: $tint-color;
+  text-decoration: none;
+  border-bottom: 1px dotted mix($text-color, $background-color, 40%);
+
+  &:hover {
+    color: $dark-tint-color;
+    border-bottom: 1px solid $dark-tint-color;
+  }
+}
+
+@import 'essay';
+@import 'landing';
+@import '404';

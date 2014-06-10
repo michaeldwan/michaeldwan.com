@@ -1,0 +1,43 @@
+body#essay {
+  .container {
+      max-width: 600px;
+  }
+
+  article {
+    @extend .typography;
+    margin: 3.3em 0;
+
+    & > section > p:first-child {
+      font-size: 1.33em;
+      line-height: 1.693em;
+    }
+  }
+
+  code {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  }
+
+  p > code {
+    font-size: 0.9em;
+    background-color: #fff;
+    padding: 3px 5px;
+    border-radius: 2px;
+  }
+
+  div.highlight {
+    overflow: auto;
+    margin: 1.5em;
+    font-size: 0.8em;
+    line-height: 1.3em;
+
+    pre {
+      overflow: auto;
+      word-wrap: normal;
+      white-space: pre;
+    }
+
+    code {
+      display: inline-block;
+    }
+  }
+}
