@@ -3,4 +3,5 @@ build
 .sass-cache
 vendor/ruby
 source/stylesheets
-env.rb
+.env
+_local_config.yml

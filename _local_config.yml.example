@@ -1,0 +1,4 @@
+google_analytics_account_id: your GA tracking code
+google_analytics_host: your domain
+
+gauges_site_id: your gauges site id if you use it

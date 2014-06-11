@@ -1,3 +1,6 @@
+require 'dotenv'
+Dotenv.load
+
 def banner(message)
   puts "=== #{message} ==="
 end
@@ -5,6 +8,15 @@ end
 def print(message)
   Kernel.print message
   STDOUT.flush
+end
+
+def jekyll_config_files
+  ["_config.yml", "_local_config.yml"].select { |f| File.exist?(f) }.join(',')
+end
+
+desc "Serve the Jekyll site"
+task :serve do
+  system("bundle exec jekyll serve --config #{jekyll_config_files}")
 end
 
 desc "Remove generated files"
@@ -16,7 +28,8 @@ end
 
 task :build do
   banner "Building"
-  `bundle exec jekyll build`
+
+  system("bundle exec jekyll build --config #{jekyll_config_files}")
 end
 
 desc "Deploy to S3"
@@ -26,14 +39,14 @@ task :deploy => [:clean, :build] do
   require 'aws-sdk'
 
   AWS.config({
-    access_key_id: ENV["aws_access_key_id"],
-    secret_access_key: ENV['aws_secret_access_key'],
-    region: ENV['aws_region']
+    access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+    region: ENV['AWS_REGION']
   })
 
   s3 = AWS::S3.new
 
-  bucket = s3.buckets[ENV['aws_s3_bucket']]
+  bucket = s3.buckets[ENV['AWS_S3_BUCKET']]
 
   current_objects = {}
 
