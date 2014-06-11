@@ -1,6 +1,3 @@
-require 'dotenv'
-Dotenv.load
-
 def banner(message)
   puts "=== #{message} ==="
 end
@@ -34,7 +31,8 @@ end
 
 desc "Deploy to S3"
 task :deploy => [:clean, :build] do
-  require './env' # env.rb file
+  require 'dotenv'
+  Dotenv.load
   # replace this hot mess with the new aws-sdk-core gem when it's released
   require 'aws-sdk'
 
