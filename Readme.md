@@ -7,7 +7,7 @@ bundle install
 bundle exec rake serve
 ```
 
-This site uses mostly vanilla Jekyll, so [read the docs](http://jekyllrb.com/docs/home/) for more info. 
+This site uses mostly vanilla Jekyll, so [read the docs](http://jekyllrb.com/docs/home/) for more info.
 There are a few custom things going on though:
 
 * The actual source files are under the `source` directory instead of the repo root. Jekyll compiles the source to the build directory.
@@ -42,4 +42,4 @@ You can probably also deploy this to Github pages, though I haven't tried it in 
 
 # License
 
-Feel free to use this code however you want, just attribute me somewhere on your site with a link back to [michaeldwan.com](http://michaeldwan.com). Enjoy.
+This code is licensed [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/). Basically, you can use it however you want, just attribute me somewhere with a link back to [michaeldwan.com](http://michaeldwan.com). Enjoy.
