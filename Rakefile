@@ -13,7 +13,7 @@ end
 
 desc "Serve the Jekyll site"
 task :serve do
-  system("bundle exec jekyll serve --config #{jekyll_config_files}")
+  system("bundle exec jekyll serve --watch --config #{jekyll_config_files}")
 end
 
 desc "Remove generated files"
