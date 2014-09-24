@@ -8,15 +8,17 @@ title: Michael Dwan
 </header>
 <section id="about">
   <img src="{{ 'me.jpg' | asset_path }}" height="128px"/>
-  <p><strong>
-    My name is Michael Dwan. I'm a software designer and developer living in Boulder Colorado. I build things I find useful. Usually for consumers. Almost always for humans.</strong>
+  <p>
+    <strong>
+      My name is Michael Dwan. I'm a software designer and engineer living in Boulder Colorado. I build things I find useful. Usually for consumers. Almost always for humans.
+    </strong>
   </p>
   <p>
     Most recently I worked as a product manager at <a href="http://dropbox.com">Dropbox</a> in San Francisco. Before Dropbox, I co-founded <a href="http://snapjoy.com">Snapjoy</a>, the world's first auto-organizing online photo library. Snapjoy was part of <a href="http://ycombinator.com">Y Combinator</a>'s summer 2011 batch and acquired by Dropbox in December 2012.
   </p>
 </section>
 <section id="links">
-  You're most likely to find me on
+  You can find me on
   <a href="http://www.twitter.com/michaeldwan">Twitter</a>,
   <a href="http://www.github.com/michaeldwan">GitHub</a>,
   <a href="http://instagram.com/michaeldwan">Instagram</a>,
@@ -27,8 +29,12 @@ title: Michael Dwan
   <ul>
   {% for post in site.posts %}
     <li class="post">
-      <span>{{ post.date | date: "%b %d, %Y" }}</span>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </span>
+      <span class="date">
+        {{ post.date | date: "%b %d, %Y" }}
+      </span>
     </li>
   {% endfor %}
   </ul>
