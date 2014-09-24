@@ -4,18 +4,27 @@ body#landing {
   }
 
   h1 {
-    font-size: 5em;
+    font-size: 2.5em;
+    font-size: 14vw;
+
+    @media (min-width: $medium-size) {
+      font-size: 4em;
+    }
   }
 
   h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1em;
     margin: 1em 0 0.3em;
     text-align: center;
   }
 
   section {
-    margin: 2em;
+    margin: 2em 0;
+    
+    @media (min-width: $medium-size) {
+      margin: 2em;
+    }
   }
 
   section#about {
@@ -37,23 +46,47 @@ body#landing {
   }
 
   section#essays {
+    h2 {
+      font-size: 1.8em;
+
+      @media (min-width: $medium-size) {
+        font-size: 2.3em;
+      }
+    }
+
     ul {
+      @media (min-width: $medium-size) {
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       li {
-        margin: 0.5em 0;
+        margin: 1em 0;
+        clear: both;
 
-        span {
-          display: inline-block;
-          width: 25%;
-          text-align: right;
+        @media (min-width: $medium-size) {
+          display: table;
+        }
+
+        span.title {
+          font-size: 1.3em;
+
+          @media (min-width: $medium-size) {
+            margin-right: 10px;
+          }
+        }
+
+        span.date {
+          display: block;
           font-weight: 100;
           opacity: 0.5;
           font-size: 0.9em;
-        }
 
-        a {
-          margin-left: 0.5em;
-          font-size: 1.25em;
+
+          @media (min-width: $medium-size) {
+            display: inline-block;
+          }
         }
       }
     }

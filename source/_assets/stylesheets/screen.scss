@@ -9,6 +9,8 @@ $text-color: #333;
 $tint-color: #d25349;
 $dark-tint-color: darken($tint-color, 30%);
 
+$medium-size: 500px;
+
 body {
   background-color: $background-color;
   color: $text-color;
@@ -26,7 +28,7 @@ body {
 
 header,
 footer {
-  margin: 20px auto;
+  margin: 1.0em auto;
   text-align: center;
 
   h1 {
@@ -48,7 +50,7 @@ footer {
 }
 
 footer {
-  padding: 1em;
+  padding: 1em 0;
   border-top: 2px solid #ccc;
 }
 
